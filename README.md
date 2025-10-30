@@ -1,4 +1,4 @@
-![Auger Theme for Obsidian](img/hero.png)
+![Auger Theme for Obsidian](img/auger.png)
 
 # Auger
 
