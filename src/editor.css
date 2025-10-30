@@ -1,0 +1,58 @@
+.cm-s-obsidian .cm-cursor {
+  @apply border-[var(--text-accent)];
+}
+
+.cm-s-obsidian .cm-selection, ::selection {
+  @apply bg-[var(--text-highlight-bg)];
+}
+
+.cm-s-obsidian .cm-editor .cm-inline-code {
+  @apply text-[var(--text-accent)] bg-[var(--background-primary-alt)] rounded px-1 py-0.5;
+}
+
+.cm-s-obsidian .cm-gutters {
+  @apply bg-[var(--background-secondary)] border-r border-[var(--background-modifier-border)] text-[var(--text-muted)];
+}
+
+.cm-s-obsidian .cm-activeLine, .cm-s-obsidian .cm-activeLineGutter {
+  @apply bg-[var(--background-primary-alt)];
+}
+
+/* Additional styles for main canvas readability */
+.markdown-preview-view p {
+  @apply my-4; /* Paragraph spacing */
+}
+
+.markdown-preview-view blockquote {
+  @apply border-l-4 border-[var(--text-muted)] pl-4 italic text-[var(--text-muted)] my-4;
+}
+
+.markdown-preview-view ul,
+.markdown-preview-view ol {
+  @apply pl-5;
+}
+
+.markdown-preview-view ul li {
+  @apply list-disc my-1;
+}
+
+.markdown-preview-view ol li {
+  @apply list-decimal my-1;
+}
+
+.markdown-preview-view pre {
+  @apply bg-[var(--background-secondary-alt)] p-4 rounded-md my-4 overflow-auto;
+}
+
+.markdown-preview-view code {
+  @apply font-mono text-sm;
+}
+
+body:not(.clean-link-off) {
+    --link-decoration: none;
+    --link-external-decoration: none;
+}
+
+body.show-inline-title .view-header-title {
+    display: none;
+}

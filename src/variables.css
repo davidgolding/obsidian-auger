@@ -1,0 +1,39 @@
+.theme-light {
+    --background-primary: #ffffff;
+    --background-primary-alt: #f5f5f7;
+    --background-secondary: #f5f5f7;
+    --background-secondary-alt: #e8e8ea;
+    --text-normal: #1d1d1f;
+    --text-muted: #86868b;
+    --text-highlight-bg: rgba(0, 122, 255, 0.2);
+    --background-modifier-border: #e0e0e0; /* Light gray border */
+    --background-modifier-hover: #e8e8ea; /* Slightly darker than secondary alt for hover */
+    --interactive-accent: var(--text-accent); /* Use text-accent for interactive elements */
+    --text-on-accent: #ffffff; /* White text on accent */
+    --font-interface-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    --font-text-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    --font-print-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    --inline-title-size: 2.25rem;
+    --inline-title-weight: 300;
+    --inline-title-line-height: calc(2.5 / 2.25);
+}
+
+.theme-dark {
+    --background-primary: #1d1d1f;
+    --background-primary-alt: #2c2c2e;
+    --background-secondary: #2c2c2e;
+    --background-secondary-alt: #3a3a3c;
+    --text-normal: #f5f5f7;
+    --text-muted: #86868b;
+    --text-highlight-bg: rgba(10, 132, 255, 0.2);
+    --background-modifier-border: #3a3a3c; /* Dark gray border */
+    --background-modifier-hover: #3a3a3c; /* Slightly lighter than secondary alt for hover */
+    --interactive-accent: var(--text-accent); /* Use text-accent for interactive elements */
+    --text-on-accent: #f5f5f7; /* Very light gray text on accent */
+    --font-interface-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    --font-text-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    --font-print-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    --inline-title-size: 2.25rem;
+    --inline-title-weight: 300;
+    --inline-title-line-height: calc(2.5 / 2.25);
+}

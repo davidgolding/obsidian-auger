@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@import "./variables.css";
+@import "./main.css";
+@import "./editor.css";
+@import "./notes.css";
+@import "./sidebar.css";
+@import "./kanban.css";

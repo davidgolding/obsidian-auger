@@ -1,0 +1,47 @@
+blockquote {
+  border-left: 4px solid var(--text-accent);
+  margin-left: 0;
+  padding-left: 1em;
+  color: var(--text-muted);
+}
+
+.callout {
+  background-color: var(--background-primary-alt);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 4px;
+  padding: 1em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid var(--background-modifier-border);
+  padding: 8px;
+}
+
+th {
+  background-color: var(--background-secondary-alt);
+}
+
+.cm-s-obsidian pre.HyperMD-codeblock {
+    background-color: var(--background-secondary-alt);
+    border-radius: 4px;
+    padding: 1em;
+    font-size: 0.9em;
+}
+
+a.tag {
+    background-color: var(--background-secondary-alt);
+    color: var(--text-muted);
+    border-radius: 20px;
+    padding: 4px 8px;
+    font-size: 0.8em;
+}
+
+a.tag:hover {
+    background-color: var(--background-modifier-hover);
+    color: var(--text-normal);
+}

@@ -1,0 +1,33 @@
+body:is(.theme-light) {
+    
+    .kanban-plugin__item {
+        @apply border-neutral-200 mt-1;
+    }
+    
+    .kanban-plugin__item-content-wrapper {
+        @apply bg-none p-1;
+    }
+    
+    .kanban-plugin__item-title-wrapper {
+        @apply bg-none;
+    }
+}
+
+body:is(.theme-dark) {
+    
+    .kanban-plugin__item {
+        @apply border-none mt-1;
+    }
+    
+    .kanban-plugin__item-content-wrapper {
+        @apply bg-neutral-700 p-1;
+    }
+    
+    .kanban-plugin__item-title-wrapper {
+        @apply bg-neutral-700;
+    }
+}
+
+.kanban-plugin__item-title :is(p) {
+    @apply text-xs;
+}
