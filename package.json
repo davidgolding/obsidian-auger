@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "pnpm dlx @tailwindcss/cli -i ./src/theme.css -o ./theme.css --watch",
     "build": "pnpm dlx @tailwindcss/cli -i ./src/theme.css -o ./theme.css"
   },
   "keywords": [],
@@ -17,6 +18,7 @@
     "tailwindcss": "^4.1.16"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.16"
+    "@tailwindcss/cli": "^4.1.16",
+    "@tailwindcss/typography": "^0.5.19"
   }
 }

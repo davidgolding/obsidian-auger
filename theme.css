@@ -183,44 +183,51 @@
     display: none !important;
   }
 }
-@layer utilities;
+@layer utilities {
+  .absolute {
+    position: absolute;
+  }
+  .contents {
+    display: contents;
+  }
+}
 .theme-light {
-  --background-primary: #ffffff;
-  --background-primary-alt: #f5f5f7;
-  --background-secondary: #f5f5f7;
-  --background-secondary-alt: #e8e8ea;
-  --text-normal: #1d1d1f;
-  --text-muted: #86868b;
-  --text-highlight-bg: rgba(0, 122, 255, 0.2);
-  --background-modifier-border: #e0e0e0;
-  --background-modifier-hover: #e8e8ea;
+  --background-primary: #fbfbfa;
+  --background-primary-alt: #f7f7f6;
+  --background-secondary: #f4f4f3;
+  --background-secondary-alt: #efefed;
+  --text-normal: #3a3633;
+  --text-muted: #8a8785;
+  --text-highlight-bg: rgba(58, 107, 80, 0.15);
+  --background-modifier-border: #e5e4e3;
+  --background-modifier-hover: #e0e0de;
   --interactive-accent: var(--text-accent);
-  --text-on-accent: #ffffff;
-  --font-interface-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-  --font-text-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-  --font-print-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  --text-on-accent: #fbfbfa;
+  --font-interface-theme: -apple-system, BlinkMacSystemFont, "Figtree", "Segoe UI", sans-serif;
+  --font-text-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Lora", serif;
+  --font-print-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Lora", serif;
   --inline-title-size: 2.25rem;
-  --inline-title-weight: 300;
-  --inline-title-line-height: calc(2.5 / 2.25);
+  --inline-title-weight: 400;
+  --inline-title-line-height: 1.2;
 }
 .theme-dark {
-  --background-primary: #1d1d1f;
-  --background-primary-alt: #2c2c2e;
-  --background-secondary: #2c2c2e;
-  --background-secondary-alt: #3a3a3c;
-  --text-normal: #f5f5f7;
-  --text-muted: #86868b;
-  --text-highlight-bg: rgba(10, 132, 255, 0.2);
+  --background-primary: #1e1e1f;
+  --background-primary-alt: #262628;
+  --background-secondary: #2a2a2c;
+  --background-secondary-alt: #363638;
+  --text-normal: #e3e1e0;
+  --text-muted: #888684;
+  --text-highlight-bg: rgba(125, 194, 160, 0.2);
   --background-modifier-border: #3a3a3c;
   --background-modifier-hover: #3a3a3c;
   --interactive-accent: var(--text-accent);
-  --text-on-accent: #f5f5f7;
-  --font-interface-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-  --font-text-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-  --font-print-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  --text-on-accent: #1e1e1f;
+  --font-interface-theme: -apple-system, BlinkMacSystemFont, "Figtree", "Segoe UI", sans-serif;
+  --font-text-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Lora", serif;
+  --font-print-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Lora", serif;
   --inline-title-size: 2.25rem;
-  --inline-title-weight: 300;
-  --inline-title-line-height: calc(2.5 / 2.25);
+  --inline-title-weight: 400;
+  --inline-title-line-height: 1.2;
 }
 body {
   background-color: var(--background-primary);
@@ -228,6 +235,7 @@ body {
   color: var(--text-normal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 .markdown-preview-view, .cm-s-obsidian .cm-editor {
   font-family: var(--font-sans);
@@ -394,7 +402,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 .nav-files-container > div {
   display: flex;
   flex-direction: column;
-  gap: calc(var(--spacing) * 1);
+  gap: calc(var(--spacing) * 0.5);
 }
 .nav-folder-title {
   border-radius: var(--radius-md);

@@ -2,6 +2,7 @@ body {
   @apply font-sans text-[var(--text-normal)] bg-[var(--background-primary)];
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .markdown-preview-view, .cm-s-obsidian .cm-editor {

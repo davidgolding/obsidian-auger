@@ -11,7 +11,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 }
 
 .nav-files-container > div {
-    @apply flex flex-col gap-1;
+    @apply flex flex-col gap-0.5;
 }
 
 .nav-folder-title {
