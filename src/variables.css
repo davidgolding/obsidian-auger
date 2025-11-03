@@ -1,76 +1,43 @@
 .theme-light {
-	/* --- Backgrounds --- */
-	/* A very light, warm "parchment" or "bone" white. Easier on the eyes than #ffffff. */
 	--background-primary: #fbfbfa;
 	--background-primary-alt: #f7f7f6;
 	--background-secondary: #f4f4f3;
-	/* A slightly more visible UI separation color */
 	--background-secondary-alt: #efefed;
-
-	/* --- Text --- */
-	/* A dark, desaturated warm gray (almost brown). Softer than pure black. */
 	--text-normal: #3a3633;
-	/* A muted, warm gray for secondary info */
 	--text-muted: #8a8785;
-	/* A new accent color for highlights, using a calming "sage" green */
 	--text-highlight-bg: rgba(58, 107, 80, 0.15);
-
-	/* --- UI & Interactive --- */
 	--background-modifier-border: #e5e4e3;
 	--background-modifier-hover: #e0e0de;
-	/* The primary accent: a deep, calming, "sage" or "forest" green. Invites focus. */
 	--interactive-accent: var(--text-accent);
-	--text-on-accent: #fbfbfa; /* Use the warm primary background for text on accents */
-
-	/* --- Typography --- */
-	/* UI Font: 'Figtree' is a clean, modern, and friendly sans-serif. Very 2025. */
+	--text-on-accent: #fbfbfa;
 	--font-interface-theme: -apple-system, BlinkMacSystemFont, "Figtree", "Segoe UI", sans-serif;
-	/* Text Font: 'Lora' is a beautiful, contemporary serif designed for screen reading. Perfect for writing. */
 	--font-text-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Lora", serif;
 	--font-print-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Lora", serif;
-
-	/* --- Headings --- */
-	/* Using the UI font for titles gives a clean, modern hierarchy */
 	--inline-title-size: 2.25rem;
-	/* Increased weight from 300 to 400 (Regular) for better, subtle presence */
 	--inline-title-weight: 400;
 	--inline-title-line-height: 1.2;
+	--tab-container-background: var(--titlebar-background);
+	--header-height: 44px;
 }
 
 .theme-dark {
-	/* --- Backgrounds --- */
-	/* A very dark, slightly warm charcoal. Not a cold, pure black. */
 	--background-primary: #1e1e1f;
 	--background-primary-alt: #262628;
 	--background-secondary: #2a2a2c;
 	--background-secondary-alt: #363638;
-
-	/* --- Text --- */
-	/* A soft, warm off-white. Not a harsh, bright white. */
 	--text-normal: #e3e1e0;
 	--text-muted: #888684;
-	/* A lighter, more "glowing" sage for the dark mode highlight */
 	--text-highlight-bg: rgba(125, 194, 160, 0.2);
-
-	/* --- UI & Interactive --- */
 	--background-modifier-border: #3a3a3c;
 	--background-modifier-hover: #3a3a3c;
-	/* A lighter, more vibrant sage that pops on the dark background */
 	--interactive-accent: var(--text-accent);
-	/* Use the dark primary background for high contrast */
 	--text-on-accent: #1e1e1f; 
-
-	/* --- Typography --- */
-	/* UI Font: 'Figtree' is a clean, modern, and friendly sans-serif. Very 2025. */
 	--font-interface-theme: -apple-system, BlinkMacSystemFont, "Figtree", "Segoe UI", sans-serif;
-	/* Text Font: 'Lora' is a beautiful, contemporary serif designed for screen reading. Perfect for writing. */
 	--font-text-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Lora", serif;
 	--font-print-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Lora", serif;
-	
-	/* --- Headings --- */
-	/* Using the UI font for titles gives a clean, modern hierarchy */
 	--inline-title-size: 2.25rem;
-	/* Increased weight from 300 to 400 (Regular) for better, subtle presence */
 	--inline-title-weight: 400;
 	--inline-title-line-height: 1.2;
+	--tab-container-background: var(--titlebar-background);
+	--header-height: 44px;
 }

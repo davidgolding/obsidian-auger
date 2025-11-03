@@ -56,3 +56,7 @@ body:not(.clean-link-off) {
 body.show-inline-title .view-header-title {
     display: none;
 }
+
+body:not(.font-variant-off) .workspace-leaf-content .view-content {
+	font-feature-settings: "ss01" 1, "ss07" 1, "cv07" 1;
+}
