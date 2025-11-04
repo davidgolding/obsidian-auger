@@ -6,6 +6,8 @@
 	--text-normal: #3a3633;
 	--text-muted: #8a8785;
 	--text-highlight-bg: hsl(var(--accent-h) var(--accent-s) var(--accent-l) 0.15);
+	--bold-color: #FF3B30;
+	--italic-color: #FF9500;
 	--background-modifier-border: #e5e4e3;
 	--background-modifier-hover: #e0e0de;
 	--interactive-accent: var(--text-accent);
@@ -29,6 +31,8 @@
 	--text-normal: #ededed;
 	--text-muted: #888684;
 	--text-highlight-bg: hsl(var(--accent-h) var(--accent-s) var(--accent-l) 0.2);
+	--bold-color: #FF453A;
+	--italic-color: #FF9F0A;
 	--background-modifier-border: #3a3a3c;
 	--background-modifier-hover: #3a3a3c;
 	--interactive-accent: var(--text-accent);

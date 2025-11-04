@@ -1,3 +1,25 @@
+/*! @settings
+
+name: Auger Theme Settings
+id: auger
+settings:
+	- 
+		id: bold-color
+		title: Bold Text Color
+		type: variable-themed-color
+		format: hex
+		default-light: '#FF3B30'
+		default-dark: '#FF453A'
+	- 
+		id: italic-color
+		title: Italic Text Color
+		type: variable-themed-color
+		format: hex
+		default-light: '#FF9500'
+		default-dark: '#FF9F0A'
+
+*/
+
 body {
   @apply font-sans text-[var(--text-normal)] bg-[var(--background-primary)];
   -webkit-font-smoothing: antialiased;
