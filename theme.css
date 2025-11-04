@@ -192,6 +192,16 @@
     display: contents;
   }
 }
+body {
+  --font-interface-theme: -apple-system, BlinkMacSystemFont, system-ui, "Figtree", "Fira Sans", "Oxygen", "Ubuntu", "Cantarell", "Roboto", "Droid Sans", sans-serif;
+  --font-text-theme: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", "Lora", P052, serif;
+  --font-print-theme: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", "Lora", P052, serif;
+  --inline-title-size: 2.25rem;
+  --inline-title-weight: 400;
+  --inline-title-line-height: 1.2;
+  --header-height: 44px;
+  --divider-width: 1px;
+}
 .theme-light {
   --background-primary: #fbfbfa;
   --background-primary-alt: #f7f7f6;
@@ -206,15 +216,7 @@
   --background-modifier-hover: #e0e0de;
   --interactive-accent: var(--text-accent);
   --text-on-accent: #fbfbfa;
-  --font-interface-theme: -apple-system, BlinkMacSystemFont, "Figtree", "Segoe UI", sans-serif;
-  --font-text-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Lora", serif;
-  --font-print-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Lora", serif;
-  --inline-title-size: 2.25rem;
-  --inline-title-weight: 400;
-  --inline-title-line-height: 1.2;
   --tab-container-background: var(--titlebar-background);
-  --header-height: 44px;
-  --divider-width: 1px;
 }
 .theme-dark {
   --background-primary: #1e1e1f;
@@ -230,15 +232,7 @@
   --background-modifier-hover: #3a3a3c;
   --interactive-accent: var(--text-accent);
   --text-on-accent: #1e1e1f;
-  --font-interface-theme: -apple-system, BlinkMacSystemFont, "Figtree", "Segoe UI", sans-serif;
-  --font-text-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Lora", serif;
-  --font-print-theme: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Lora", serif;
-  --inline-title-size: 2.25rem;
-  --inline-title-weight: 400;
-  --inline-title-line-height: 1.2;
   --tab-container-background: var(--titlebar-background);
-  --header-height: 44px;
-  --divider-width: 1px;
 }
 /*! @settings
 
