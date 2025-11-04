@@ -3,7 +3,7 @@
 }
 
 .workspace-split.mod-left-split {
-  @apply bg-[var(--background-secondary)] border-r border-[var(--background-modifier-border)]; /* Refined padding */
+  @apply bg-[var(--background-secondary)] border-r border-[var(--background-modifier-border)];
 }
 
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
@@ -15,19 +15,19 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 }
 
 .nav-folder-title {
-  @apply text-[var(--text-normal)] text-xs px-2 rounded-md transition-colors duration-200 ease-in-out; /* Adjusted font size, padding, and transition */
+  @apply text-[var(--text-normal)] text-xs px-2 rounded-md transition-colors duration-200 ease-in-out;
 }
 
 .nav-file-title {
-  @apply text-[var(--text-normal)] text-xs pr-2 pl-5 rounded-md transition-colors duration-200 ease-in-out; /* Adjusted font size, padding, and transition */
+  @apply text-[var(--text-normal)] text-xs pr-2 pl-5 rounded-md transition-colors duration-200 ease-in-out;
 }
 
 .nav-folder-title:hover, .nav-file-title:hover {
-  @apply bg-[var(--background-primary-alt)]; /* Softer hover state */
+  @apply bg-[var(--background-primary-alt)];
 }
 
 .nav-file-title.is-active {
-  @apply bg-[var(--text-accent)] text-[var(--text-on-accent)]; /* Using --text-on-accent for active state text color */
+  @apply bg-[var(--text-accent)] text-[var(--text-on-accent)];
 }
 
 .nav-action-button {
@@ -38,7 +38,6 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
   @apply text-[var(--text-normal)];
 }
 
-/* Further refinements for sidebar elements */
 .nav-folder.is-collapsed > .nav-folder-children {
   @apply hidden;
 }

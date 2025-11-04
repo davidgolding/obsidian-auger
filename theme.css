@@ -199,7 +199,7 @@
   --background-secondary-alt: #efefed;
   --text-normal: #3a3633;
   --text-muted: #8a8785;
-  --text-highlight-bg: rgba(58, 107, 80, 0.15);
+  --text-highlight-bg: hsl(var(--accent-h) var(--accent-s) var(--accent-l) 0.15);
   --background-modifier-border: #e5e4e3;
   --background-modifier-hover: #e0e0de;
   --interactive-accent: var(--text-accent);
@@ -212,6 +212,7 @@
   --inline-title-line-height: 1.2;
   --tab-container-background: var(--titlebar-background);
   --header-height: 44px;
+  --divider-width: 1px;
 }
 .theme-dark {
   --background-primary: #1e1e1f;
@@ -220,7 +221,7 @@
   --background-secondary-alt: #363638;
   --text-normal: #e3e1e0;
   --text-muted: #888684;
-  --text-highlight-bg: rgba(125, 194, 160, 0.2);
+  --text-highlight-bg: hsl(var(--accent-h) var(--accent-s) var(--accent-l) 0.2);
   --background-modifier-border: #3a3a3c;
   --background-modifier-hover: #3a3a3c;
   --interactive-accent: var(--text-accent);
@@ -233,6 +234,7 @@
   --inline-title-line-height: 1.2;
   --tab-container-background: var(--titlebar-background);
   --header-height: 44px;
+  --divider-width: 1px;
 }
 body {
   background-color: var(--background-primary);
@@ -360,7 +362,6 @@ body:not(.font-variant-off) .workspace-leaf-content .view-content {
     --tw-border-style: none;
     border-style: none;
     padding-inline: calc(var(--spacing) * 2);
-    padding-block: calc(var(--spacing) * 1.5);
     --tw-shadow: 0 0 #0000;
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     display: flex;
@@ -375,10 +376,10 @@ body:not(.font-variant-off) .workspace-leaf-content .view-content {
     --tw-shadow: 0 0 #0000;
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     margin-inline: calc(var(--spacing) * 0.5);
+    margin-block: calc(var(--spacing) * 1.75);
     height: auto;
     border-radius: 7px;
-    padding-inline: calc(var(--spacing) * 3);
-    padding-block: calc(var(--spacing) * 1.5);
+    padding: calc(var(--spacing) * 0);
     color: var(--text-muted);
     background-image: none !important;
   }
@@ -391,7 +392,6 @@ body:not(.font-variant-off) .workspace-leaf-content .view-content {
     --tw-shadow: 0 0 #0000;
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     color: var(--text-normal);
-    background-image: none !important;
   }
   .workspace-tabs .workspace-tab-header:not(.is-active):hover {
     background-color: var(--background-secondary-alt);
@@ -402,7 +402,9 @@ body:not(.font-variant-off) .workspace-leaf-content .view-content {
     --tw-border-style: none;
     border-style: none;
     background-color: transparent;
-    padding: calc(var(--spacing) * 0);
+    padding-block: 8px;
+    padding-right: calc(var(--spacing) * 1.5);
+    padding-left: calc(var(--spacing) * 3);
   }
   .workspace-tabs .workspace-tab-header::before,	.workspace-tabs .workspace-tab-header::after,	.workspace-tabs .workspace-tab-header-inner::before,	.workspace-tabs .workspace-tab-header-inner::after {
     display: none !important;
@@ -434,7 +436,7 @@ body:not(.font-variant-off) .workspace-leaf-content .view-content {
     align-items: center;
     --tw-border-style: none;
     border-style: none;
-    padding-block: calc(var(--spacing) * 1.5);
+    padding-block: calc(var(--spacing) * 1.25);
     --tw-shadow: 0 0 #0000;
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     min-height: var(--header-height);

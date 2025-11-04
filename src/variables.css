@@ -5,7 +5,7 @@
 	--background-secondary-alt: #efefed;
 	--text-normal: #3a3633;
 	--text-muted: #8a8785;
-	--text-highlight-bg: rgba(58, 107, 80, 0.15);
+	--text-highlight-bg: hsl(var(--accent-h) var(--accent-s) var(--accent-l) 0.15);
 	--background-modifier-border: #e5e4e3;
 	--background-modifier-hover: #e0e0de;
 	--interactive-accent: var(--text-accent);
@@ -18,6 +18,7 @@
 	--inline-title-line-height: 1.2;
 	--tab-container-background: var(--titlebar-background);
 	--header-height: 44px;
+	--divider-width: 1px;
 }
 
 .theme-dark {
@@ -27,7 +28,7 @@
 	--background-secondary-alt: #363638;
 	--text-normal: #e3e1e0;
 	--text-muted: #888684;
-	--text-highlight-bg: rgba(125, 194, 160, 0.2);
+	--text-highlight-bg: hsl(var(--accent-h) var(--accent-s) var(--accent-l) 0.2);
 	--background-modifier-border: #3a3a3c;
 	--background-modifier-hover: #3a3a3c;
 	--interactive-accent: var(--text-accent);
@@ -40,4 +41,5 @@
 	--inline-title-line-height: 1.2;
 	--tab-container-background: var(--titlebar-background);
 	--header-height: 44px;
+	--divider-width: 1px;
 }

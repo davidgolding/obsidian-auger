@@ -1,13 +1,13 @@
 .mod-root {
 	.workspace-tabs .workspace-tab-header-container {
-		@apply shadow-none border-none px-2 py-1.5;
+		@apply shadow-none border-none px-2;
 		@apply h-auto flex items-center;
 		min-height: var(--header-height);
 	}
 	
 	.workspace-tabs .workspace-tab-header {
 		@apply border-none shadow-none bg-transparent;
-		@apply px-3 py-1.5 mx-0.5 rounded-[7px] h-auto;
+		@apply mx-0.5 my-1.75 rounded-[7px] h-auto p-0;
 		color: var(--text-muted);
 		background-image: none !important;
 	}
@@ -15,7 +15,6 @@
 	.workspace-tabs .workspace-tab-header.is-active {
 		@apply bg-[var(--background-secondary)] font-medium border-none shadow-none;
 		color: var(--text-normal);
-		background-image: none !important;
 	}
 	
 	.workspace-tabs .workspace-tab-header:not(.is-active):hover {
@@ -25,7 +24,7 @@
 	}
 	
 	.workspace-tabs .workspace-tab-header-inner {
-		@apply p-0 bg-transparent border-none;
+		@apply pl-3 pr-1.5 py-[8px] bg-transparent border-none;
 	}
 	
 	.workspace-tabs .workspace-tab-header::before,
@@ -50,7 +49,7 @@
 
 .mod-sidedock {
 	.workspace-tabs .workspace-tab-header-container {
-		@apply h-auto flex items-center py-1.5 my-0 border-none shadow-none;
+		@apply h-auto flex items-center py-1.25 my-0 border-none shadow-none;
 		min-height: var(--header-height);
 	}
 	
