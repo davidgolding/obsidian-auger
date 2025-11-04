@@ -219,7 +219,7 @@
   --background-primary-alt: #262628;
   --background-secondary: #2a2a2c;
   --background-secondary-alt: #363638;
-  --text-normal: #e3e1e0;
+  --text-normal: #ededed;
   --text-muted: #888684;
   --text-highlight-bg: hsl(var(--accent-h) var(--accent-s) var(--accent-l) 0.2);
   --background-modifier-border: #3a3a3c;
@@ -501,9 +501,6 @@ a.tag:hover {
   color: var(--text-normal);
 }
 .workspace-split.mod-left-split {
-  border-right-style: var(--tw-border-style);
-  border-right-width: 1px;
-  border-color: var(--background-modifier-border);
   background-color: var(--background-secondary);
 }
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
