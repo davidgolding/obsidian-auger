@@ -445,6 +445,21 @@ body:not(.font-variant-off) .workspace-leaf-content .view-content {
     padding: 8px;
   }
 }
+.workspace-ribbon.mod-left {
+  margin-top: calc(var(--spacing) * 0);
+  --tw-border-style: none;
+  border-style: none;
+  background-color: var(--background-secondary);
+}
+.workspace-ribbon .side-dock-actions {
+  margin-top: calc(var(--header-height) + 24px);
+}
+.workspace-ribbon.mod-left:before {
+  --tw-border-style: none;
+  border-style: none;
+  background-color: var(--background-secondary-alt);
+  min-height: calc(var(--header-height) + 17px);
+}
 blockquote {
   border-left: 4px solid var(--text-accent);
   margin-left: 0;
@@ -484,9 +499,6 @@ a.tag {
 a.tag:hover {
   background-color: var(--background-modifier-hover);
   color: var(--text-normal);
-}
-.workspace-ribbon {
-  border-right: none;
 }
 .workspace-split.mod-left-split {
   border-right-style: var(--tw-border-style);

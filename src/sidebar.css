@@ -1,7 +1,3 @@
-.workspace-ribbon {
-    border-right: none;
-}
-
 .workspace-split.mod-left-split {
   @apply bg-[var(--background-secondary)] border-r border-[var(--background-modifier-border)];
 }

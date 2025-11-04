@@ -18,9 +18,8 @@
   @apply bg-[var(--background-primary-alt)];
 }
 
-/* Additional styles for main canvas readability */
 .markdown-preview-view p {
-  @apply my-4; /* Paragraph spacing */
+  @apply my-4;
 }
 
 .markdown-preview-view blockquote {

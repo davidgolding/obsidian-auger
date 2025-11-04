@@ -57,3 +57,16 @@
 		@apply p-[8px];
 	}
 }
+
+.workspace-ribbon.mod-left {
+	@apply mt-0 border-none bg-[var(--background-secondary)];
+}
+
+.workspace-ribbon .side-dock-actions {
+	margin-top: calc(var(--header-height) + 24px);
+}
+
+.workspace-ribbon.mod-left:before {
+	@apply bg-[var(--background-secondary-alt)] border-none;
+	min-height: calc(var(--header-height) + 17px);
+}
