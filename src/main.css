@@ -1,6 +1,6 @@
 /*! @settings
 
-name: Auger Theme Settings
+name: Auger
 id: auger
 settings:
     -
@@ -10,8 +10,14 @@ settings:
         level: 3
     -
         id: is-light-canvas
-        title: Light Canvas
+        title: Light canvas
         description: In dark mode, keeps the note canvas light.
+        type: class-toggle
+        default: false
+    -
+        id: inactive-blur
+        title: Inactive window blur
+        description: When the window is not focused, blur the content.
         type: class-toggle
         default: false
     -
@@ -21,14 +27,14 @@ settings:
         level: 3
     -
         id: bold-color
-        title: Bold Text Color
+        title: Bold text color
         type: variable-themed-color
         format: hex
         default-light: '#FF3B30'
         default-dark: '#FF453A'
     -
         id: italic-color
-        title: Italic Text Color
+        title: Italic text color
         type: variable-themed-color
         format: hex
         default-light: '#FF9500'
@@ -46,14 +52,14 @@ settings:
         default: false
     -
         id: inline-title-font
-        title: Inline Title Font
+        title: Inline title font
 		description: The font family name; "inherit" uses the Appearance > Text Font setting.
         type: variable-text
         default: 'inherit'
         quotes: true
     -
         id: inline-title-weight
-        title: Inline Title Weight
+        title: Inline title weight
         type: variable-select
         default: '400'
         options:
@@ -86,7 +92,7 @@ settings:
                 value: '900'
     -
         id: inline-title-size
-        title: Inline Title Size
+        title: Inline title size
         type: variable-number-slider
         default: 2.25
         min: 0.75
@@ -95,7 +101,7 @@ settings:
         format: rem
     -
         id: inline-title-line-height
-        title: Inline Title Line Height
+        title: Inline title line height
         type: variable-number-slider
         default: 1.2
         min: 0
@@ -115,6 +121,12 @@ body:is(.font-smoothing-off) {
     -webkit-font-smoothing: auto;
     -moz-osx-font-smoothing: auto;
     text-rendering: auto;
+}
+
+body.inactive-blur:not(.is-focused) .app-container {
+  @apply transition-all;
+  filter: blur(5px);
+  opacity: 0.8;
 }
 
 body.is-light-canvas:not(.is-mobile).theme-dark .workspace-tabs:not(.mod-stacked) .view-content:not(.vignette-radial, .vignette-linear, .animate, .ptm-fullscreen-writing-focus-element) {

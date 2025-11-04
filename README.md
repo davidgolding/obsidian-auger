@@ -17,6 +17,7 @@ Auger is a minimalist theme for Obsidian that prioritizes long-form writing and 
     * *Font Smoothing Toggle*
     * *Custom Inline Title Font*
     * *Custom Inline Title Size, Weight, and Line Height*
+    * *Inactive Window Blur*
 
 ---
 
