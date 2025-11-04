@@ -202,13 +202,15 @@ body {
   --inline-title-line-height: 1.2;
   --header-height: 44px;
   --divider-width: 1px;
+  --auger-light-background-primary: #fbfbfa;
+  --auger-light-text-normal: #3a3633;
 }
 .theme-light {
-  --background-primary: #fbfbfa;
+  --background-primary: var(--auger-light-background-primary);
   --background-primary-alt: #f7f7f6;
   --background-secondary: #f4f4f3;
   --background-secondary-alt: #efefed;
-  --text-normal: #3a3633;
+  --text-normal: var(--auger-light-text-normal);
   --text-muted: #8a8785;
   --text-highlight-bg: hsl(var(--accent-h) var(--accent-s) var(--accent-l) 0.15);
   --bold-color: #FF3B30;
@@ -240,6 +242,17 @@ body {
 name: Auger Theme Settings
 id: auger
 settings:
+    -
+        id: interface-heading
+        title: Interface
+        type: heading
+        level: 3
+    -
+        id: is-light-canvas
+        title: Light Canvas
+        description: In dark mode, keeps the note canvas light.
+        type: class-toggle
+        default: false
     -
         id: colors-heading
         title: Colors
@@ -341,6 +354,20 @@ body:is(.font-smoothing-off) {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
   text-rendering: auto;
+}
+body.is-light-canvas:not(.is-mobile).theme-dark .workspace-tabs:not(.mod-stacked) .view-content:not(.vignette-radial, .vignette-linear, .animate, .ptm-fullscreen-writing-focus-element) {
+  background-color: var(--auger-light-background-primary);
+  border-top-left-radius: var(--card-border-radius-dark, 8px);
+  border-top-right-radius: var(--card-border-radius-dark, 8px);
+}
+body.is-light-canvas:not(.is-mobile).theme-dark .workspace-tabs:not(.mod-stacked) .view-content:not(.vignette-radial, .vignette-linear, .animate, .ptm-fullscreen-writing-focus-element) .cm-content {
+  color: var(--auger-light-text-normal);
+}
+body.is-light-canvas.theme-dark .view-content .inline-title {
+  color: var(--auger-light-text-normal);
+}
+body.is-light-canvas.theme-dark .view-content .markdown-source-view.mod-cm6 .cm-content {
+  caret-color: var(--color-base-25);
 }
 .markdown-preview-view, .cm-s-obsidian .cm-editor {
   font-family: var(--font-sans);

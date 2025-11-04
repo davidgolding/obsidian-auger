@@ -4,6 +4,17 @@ name: Auger Theme Settings
 id: auger
 settings:
     -
+        id: interface-heading
+        title: Interface
+        type: heading
+        level: 3
+    -
+        id: is-light-canvas
+        title: Light Canvas
+        description: In dark mode, keeps the note canvas light.
+        type: class-toggle
+        default: false
+    -
         id: colors-heading
         title: Colors
         type: heading
@@ -104,6 +115,24 @@ body:is(.font-smoothing-off) {
     -webkit-font-smoothing: auto;
     -moz-osx-font-smoothing: auto;
     text-rendering: auto;
+}
+
+body.is-light-canvas:not(.is-mobile).theme-dark .workspace-tabs:not(.mod-stacked) .view-content:not(.vignette-radial, .vignette-linear, .animate, .ptm-fullscreen-writing-focus-element) {
+    background-color: var(--auger-light-background-primary);
+    border-top-left-radius: var(--card-border-radius-dark, 8px);
+    border-top-right-radius: var(--card-border-radius-dark, 8px);
+}
+
+body.is-light-canvas:not(.is-mobile).theme-dark .workspace-tabs:not(.mod-stacked) .view-content:not(.vignette-radial, .vignette-linear, .animate, .ptm-fullscreen-writing-focus-element) .cm-content {
+    color: var(--auger-light-text-normal);
+}
+
+body.is-light-canvas.theme-dark .view-content .inline-title {
+    color: var(--auger-light-text-normal);
+}
+
+body.is-light-canvas.theme-dark .view-content .markdown-source-view.mod-cm6 .cm-content {
+    caret-color: var(--color-base-25);
 }
 
 .markdown-preview-view, .cm-s-obsidian .cm-editor {
