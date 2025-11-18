@@ -15,9 +15,6 @@
 }
 
 body {
-	--font-interface-theme: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Figtree", "Fira Sans", "Oxygen", "Ubuntu", "Cantarell", "Roboto", "Droid Sans", sans-serif;
-	--font-text-theme: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", "Lora", P052, serif;
-	--font-print-theme: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", "Lora", P052, serif;
 	--inline-title-font: inherit;
 	--inline-title-size: 2.25rem;
 	--inline-title-weight: 400;
@@ -26,6 +23,8 @@ body {
 	--divider-width: 1px;
     --auger-light-background-primary: #fbfbfa;
     --auger-light-text-normal: #3a3633;
+    --font-sans: var(--font-interface-override), var(--font-default);
+    --font-mono: var(--font-monospace-override), var(--font-monospace-default);
 }
 
 .theme-light {

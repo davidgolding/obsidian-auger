@@ -3,7 +3,7 @@
         @apply shadow-none border-none px-2;
         @apply flex items-center;
         /* Use padding instead of relying on child margins */
-        padding-top: 2px;
+        padding-top: 3px;
         padding-bottom: 8px;
         min-height: var(--header-height);
     }

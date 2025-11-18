@@ -193,9 +193,6 @@
   }
 }
 body {
-  --font-interface-theme: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Figtree", "Fira Sans", "Oxygen", "Ubuntu", "Cantarell", "Roboto", "Droid Sans", sans-serif;
-  --font-text-theme: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", "Lora", P052, serif;
-  --font-print-theme: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", "Lora", P052, serif;
   --inline-title-font: inherit;
   --inline-title-size: 2.25rem;
   --inline-title-weight: 400;
@@ -204,6 +201,8 @@ body {
   --divider-width: 1px;
   --auger-light-background-primary: #fbfbfa;
   --auger-light-text-normal: #3a3633;
+  --font-sans: var(--font-interface-override), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: var(--font-monospace-override), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 .theme-light {
   --background-primary: var(--auger-light-background-primary);
@@ -504,7 +503,7 @@ body:not(.font-variant-off) .workspace-leaf-content .view-content {
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     display: flex;
     align-items: center;
-    padding-top: 2px;
+    padding-top: 3px;
     padding-bottom: 8px;
     min-height: var(--header-height);
   }
@@ -715,6 +714,12 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 }
 .nav-buttons-container .nav-action-button {
   padding: calc(var(--spacing) * 1.5);
+}
+button {
+  border-radius: 100vh;
+}
+select.dropdown {
+  border-radius: 100vh;
 }
 body:is(.theme-light) {
   .kanban-plugin__item {
