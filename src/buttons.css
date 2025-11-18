@@ -15,40 +15,33 @@ button:active {
 }
 
 button.mod-cta {
-  @apply relative overflow-hidden;
-  @apply shadow-[0_4px_16px_0_rgba(0,0,0,0.2),inset_0_1px_0_0_rgba(255,255,255,0.3)];
-  @apply border border-white/20;
-  
-  background-color: var(--interactive-accent);
-  --text-color: var(--text-on-accent);
+    @apply relative overflow-hidden;
+    @apply border border-white/35;
+    background-color: var(--interactive-accent);
+    --text-color: var(--text-on-accent);
 }
 
 /* Subtle shine effect on hover */
 button.mod-cta::before {
-  @apply content-[''] absolute top-0 -left-full w-full h-full;
-  @apply transition-[left] duration-500 ease-in-out;
-  
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.15),
-    transparent
-  );
+    @apply content-[''] absolute top-0 -left-full w-full h-full;
+    @apply transition-[left] duration-500 ease-in-out;
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 255, 255, 0.15),
+        transparent);
 }
 
 button.mod-cta:hover {
-  @apply border-white/35;
-  @apply shadow-[0_6px_20px_0_rgba(0,0,0,0.3),inset_0_1px_0_0_rgba(255,255,255,0.4)];
-  @apply brightness-110;
+    @apply border-white/35;
+    @apply brightness-110;
 }
 
 button.mod-cta:hover::before {
-  @apply left-full;
+    @apply left-full;
 }
 
 button.mod-cta:active {
-  @apply brightness-95;
-  @apply shadow-[0_2px_8px_0_rgba(0,0,0,0.25),inset_0_1px_0_0_rgba(255,255,255,0.25)];
+    @apply brightness-95;
 }
 
 select.dropdown {
