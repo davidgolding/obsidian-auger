@@ -1,10 +1,10 @@
-![Auger Theme for Obsidian](img/auger.png)
-
-# Auger
+![Auger Theme for Obsidian](img/auger.jpg)
 
 Auger is a minimalist theme for Obsidian that prioritizes long-form writing and readability. It provides a clean, elegant, and unobtrusive interface, allowing you to focus on your notes.
 
 ## Features
+
+![Screenshot showing light mode](img/light-screen.png)
 
 *   **Pristine Typography:** Auger is designed for a superior reading experience. It features generous line spacing, a clear and legible font stack, font smoothing and antialiasing, and a well-balanced type scale.
 *   **Minimalist Aesthetic:** The theme is intentionally spare, removing visual noise so you can concentrate on your writing.
@@ -18,6 +18,8 @@ Auger is a minimalist theme for Obsidian that prioritizes long-form writing and 
     * *Custom Inline Title Font*
     * *Custom Inline Title Size, Weight, and Line Height*
     * *Inactive Window Blur*
+    
+![Screenshot showing dark mode](img/dark-screen.png)
 
 ---
 
