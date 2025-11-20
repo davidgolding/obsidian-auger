@@ -32,7 +32,7 @@
     .workspace-tabs .workspace-tab-header-inner {
         @apply pl-3 pr-1.5 bg-transparent border-none;
         /* Back to fixed pixel padding for consistent look */
-        padding-top: 8px;
+        padding-top: 10px;
         padding-bottom: 8px;
     }
     
