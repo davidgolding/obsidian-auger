@@ -22,10 +22,6 @@ td, th {
   padding: 8px;
 }
 
-th {
-  background-color: var(--background-secondary-alt);
-}
-
 .cm-s-obsidian pre.HyperMD-codeblock {
     background-color: var(--background-secondary-alt);
     border-radius: 4px;

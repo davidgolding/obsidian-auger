@@ -13,19 +13,19 @@
     --spacing: 0.25rem;
     --text-xs: 0.75rem;
     --text-xs--line-height: calc(1 / 0.75);
-    --text-sm: 0.875rem;
+    --text-sm: 1rem;
     --text-sm--line-height: calc(1.25 / 0.875);
-    --text-base: 1rem;
+    --text-base: 1.2rem;
     --text-base--line-height: calc(1.5 / 1);
-    --text-lg: 1.125rem;
+    --text-lg: 1.4rem;
     --text-lg--line-height: calc(1.75 / 1.125);
-    --text-xl: 1.25rem;
+    --text-xl: 1.8rem;
     --text-xl--line-height: calc(1.75 / 1.25);
-    --text-2xl: 1.5rem;
+    --text-2xl: 2.25rem;
     --text-2xl--line-height: calc(2 / 1.5);
-    --text-3xl: 1.875rem;
+    --text-3xl: 3rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
-    --text-4xl: 2.25rem;
+    --text-4xl: 3.75rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-medium: 500;
     --leading-relaxed: 1.625;
@@ -195,7 +195,7 @@
 }
 body {
   --inline-title-font: inherit;
-  --inline-title-size: 2.25rem;
+  --inline-title-size: 3rem;
   --inline-title-weight: 400;
   --inline-title-line-height: 1.2;
   --header-height: 60px;
@@ -220,6 +220,7 @@ body {
   --interactive-accent: var(--text-accent);
   --text-on-accent: #fbfbfa;
   --tab-container-background: var(--titlebar-background);
+  --table-header-background: var(--background-secondary-alt);
 }
 .theme-dark {
   --background-primary: #1e1e1f;
@@ -236,6 +237,7 @@ body {
   --interactive-accent: var(--text-accent);
   --text-on-accent: #1e1e1f;
   --tab-container-background: var(--titlebar-background);
+  --table-header-background: var(--background-secondary-alt);
 }
 /*! @settings
 
@@ -333,9 +335,9 @@ settings:
         id: inline-title-size
         title: Inline title size
         type: variable-number-slider
-        default: 2.25
+        default: 3
         min: 0.75
-        max: 4.5
+        max: 8
         step: 0.25
         format: rem
     -
@@ -542,7 +544,7 @@ body:not(.font-variant-off) .workspace-leaf-content .view-content {
     background-color: transparent;
     padding-right: calc(var(--spacing) * 1.5);
     padding-left: calc(var(--spacing) * 3);
-    padding-top: 8px;
+    padding-top: 10px;
     padding-bottom: 8px;
   }
   .workspace-tabs .workspace-tab-header::before, .workspace-tabs .workspace-tab-header::after, .workspace-tabs .workspace-tab-header-inner::before, .workspace-tabs .workspace-tab-header-inner::after {
@@ -624,9 +626,6 @@ table {
 td, th {
   border: 1px solid var(--background-modifier-border);
   padding: 8px;
-}
-th {
-  background-color: var(--background-secondary-alt);
 }
 .cm-s-obsidian pre.HyperMD-codeblock {
   background-color: var(--background-secondary-alt);
