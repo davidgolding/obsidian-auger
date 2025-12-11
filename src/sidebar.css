@@ -1,55 +1,65 @@
 .workspace-split.mod-left-split {
-  @apply bg-[var(--background-secondary)];
+    @apply bg-[var(--background-secondary)];
 }
 
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
     border-top: none;
 }
 
-.nav-files-container > div {
+.nav-files-container>div {
     @apply flex flex-col gap-0.5;
 }
 
 .nav-folder-title {
-  @apply text-[var(--text-normal)] text-xs px-2 rounded-md transition-colors duration-200 ease-in-out;
+    @apply text-[var(--text-normal)] text-xs px-2 rounded-md transition-colors duration-200 ease-in-out;
 }
 
 .nav-file-title {
-  @apply text-[var(--text-normal)] text-xs pr-2 pl-5 rounded-md transition-colors duration-200 ease-in-out;
+    @apply text-[var(--text-normal)] text-xs pr-2 pl-5 rounded-md transition-colors duration-200 ease-in-out;
 }
 
-.nav-folder-title:hover, .nav-file-title:hover {
-  @apply bg-[var(--background-primary-alt)];
+.nav-folder-title:hover,
+.nav-file-title:hover {
+    @apply bg-[var(--background-primary-alt)];
 }
 
 .nav-file-title.is-active {
-  @apply bg-[var(--text-accent)] text-[var(--text-on-accent)];
+    @apply bg-[var(--text-accent)] text-[var(--text-on-accent)];
+}
+
+.nav-file-title input,
+.nav-folder-title input,
+.nav-file-title input:hover,
+.nav-file-title input:focus,
+.nav-folder-title input:hover,
+.nav-folder-title input:focus {
+    @apply text-[var(--text-normal)] bg-[var(--background-primary)] shadow-sm rounded-sm;
 }
 
 .nav-action-button {
-  @apply text-[var(--text-muted)];
+    @apply text-[var(--text-muted)];
 }
 
 .nav-action-button:hover {
-  @apply text-[var(--text-normal)];
+    @apply text-[var(--text-normal)];
 }
 
-.nav-folder.is-collapsed > .nav-folder-children {
-  @apply hidden;
+.nav-folder.is-collapsed>.nav-folder-children {
+    @apply hidden;
 }
 
 .nav-folder-title-content {
-  @apply flex items-center;
+    @apply flex items-center;
 }
 
 .nav-folder-title-content .nav-folder-icon {
-  @apply mr-1;
+    @apply mr-1;
 }
 
 .nav-buttons-container {
-  @apply flex justify-center p-2;
+    @apply flex justify-center p-2;
 }
 
 .nav-buttons-container .nav-action-button {
-  @apply p-1.5;
+    @apply p-1.5;
 }
