@@ -169,3 +169,18 @@ a {
 a:hover {
   @apply text-[var(--text-accent-hover)] underline;
 }
+
+/* Fix for opaque modal close button */
+.modal-close-button {
+    @apply z-[var(--layer-modal)] text-[var(--text-muted)] opacity-100;
+}
+.modal-close-button:hover {
+    @apply text-[var(--text-normal)];
+}
+
+/* Fix for embed font matching */
+/* Ensure embeds inherit the font of the document they are inside, rather than resetting to base font */
+.markdown-embed .markdown-preview-view,
+.internal-embed .markdown-preview-view {
+    font-family: inherit !important;
+}
