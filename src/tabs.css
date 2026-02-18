@@ -10,30 +10,29 @@
     
     .workspace-tabs .workspace-tab-header {
         @apply border-none shadow-none bg-transparent;
-        @apply mx-0.5 rounded-[7px];
-        /* Remove the margin - container handles spacing now */
-        margin-top: 0;
-        margin-bottom: 0;
+        @apply mx-1 rounded-full flex items-center;
+        @apply transition-all duration-200 ease-in-out;
+        height: 36px;
         color: var(--text-muted);
         background-image: none !important;
     }
     
     .workspace-tabs .workspace-tab-header.is-active {
-        @apply bg-[var(--background-secondary)] font-medium border-none shadow-none;
-        color: var(--text-normal);
+        @apply bg-[var(--tab-background-active)] text-[var(--tab-text-color-active)] font-medium border-none shadow-none;
     }
     
-    .workspace-tabs .workspace-tab-header:not(.is-active):hover {
-        @apply bg-[var(--background-secondary-alt)];
+    .workspace-tabs .workspace-tab-header:not(.is-active) {
+        @apply bg-[var(--background-secondary)] rounded-full border-none shadow-none;
         color: var(--text-normal);
         background-image: none !important;
     }
     
     .workspace-tabs .workspace-tab-header-inner {
-        @apply pl-3 pr-1.5 bg-transparent border-none;
-        /* Back to fixed pixel padding for consistent look */
-        padding-top: 10px;
-        padding-bottom: 8px;
+        @apply pl-3 pr-1.5 pt-[10px] pb-[8px];
+    }
+    
+    .workspace-tabs .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+        @apply bg-transparent;
     }
     
     .workspace-tabs .workspace-tab-header::before,
@@ -67,12 +66,14 @@
     }
     
     .workspace-tabs .workspace-tab-header {
+        @apply mx-1 rounded-[8px] flex items-center;
+        height: 36px;
         margin: 0;
     }
     
     .workspace-tab-header-inner {
-        /* Match main tab bar inner padding */
-        padding: 8px;
+        @apply flex items-center px-1.5;
+        height: 100%;
     }
 }
 
