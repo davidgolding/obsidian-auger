@@ -21,7 +21,7 @@
     .workspace-tab-header {
         @apply border-none shadow-none bg-[var(--background-secondary)];
         @apply mx-1 rounded-full flex items-center;
-        @apply transition-all duration-200 ease-in-out;
+        @apply transition-colors duration-200 ease-in-out;
         @apply h-[36px];
     }
     
@@ -36,14 +36,6 @@
         @apply pl-3 pr-1.5 pt-[10px] pb-[8px] bg-none;
     }
     
-    .workspace-tab-header-inner-icon {
-        @apply text-[var(--text-on-accent)];
-    }
-    
-    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-icon {
-        @apply text-[var(--text-normal)];
-    }
-    
     .workspace-tab-header-inner-close-button {
         @apply bg-none;
     }
@@ -56,6 +48,10 @@
         @apply bg-none bg-transparent;
     }
     
+    .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+        color: var(--text-on-accent) !important;
+    }
+    
     .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-close-button {
         @apply text-[var(--text-normal)] bg-[var(--background-secondary-alt)] rounded-full;
     }
@@ -63,17 +59,28 @@
     .workspace-tab-header-container .titlebar-button-container.mod-right {
         @apply h-full flex items-center;
     }
-    
-    /* When tab is active */
-    
-    .workspace-tab-header.is-active {
-        @apply bg-[var(--tab-background-active)] font-medium;
-    }
-    
-    .workspace-tab-header.is-active .workspace-tab-header-inner-close-button:hover {
-        @apply bg-[var(--background-primary)]/30 rounded-full;
-        @apply transition-all duration-100 ease-in-out;
-    }
+}
+
+/* Tab Header Colors and State - Applied to both Root and Sidebars */
+.workspace-tab-header {
+    @apply transition-colors duration-200 ease-in-out;
+}
+
+.workspace-tab-header.is-active {
+    @apply bg-[var(--tab-background-active)] font-medium;
+}
+
+.workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+    color: var(--text-normal) !important;
+}
+
+.workspace-tab-header:not(.is-active) .workspace-tab-header-inner-icon {
+    color: var(--text-normal) !important;
+}
+
+.workspace-tab-header.is-active .workspace-tab-header-inner-close-button:hover {
+    @apply bg-[var(--background-primary)]/30 rounded-full;
+    @apply transition-all duration-100 ease-in-out;
 }
 
 /* Sidebars - not main workspace area */

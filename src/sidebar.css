@@ -27,6 +27,10 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
     @apply bg-[var(--text-accent)] text-[var(--text-on-accent)];
 }
 
+.nav-file-title.is-active .nav-file-tag {
+    @apply text-[var(--text-on-accent)] bg-[var(--background-secondary)]/10 rounded-sm;
+}
+
 .nav-file-title input,
 .nav-folder-title input,
 .nav-file-title input:hover,
