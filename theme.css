@@ -313,16 +313,17 @@ body {
   --interactive-accent: var(--text-accent);
   --text-on-accent: #1e1e1f;
   --text-on-accent: oklch(from var(--text-accent) clamp(0.15, (0.5 - l) * 100, 0.98) 0 0);
-  --tab-container-background: var(--background-secondary);
   --table-header-background: var(--background-secondary-alt);
+  --tab-container-background: var(--background-secondary);
   --tab-background-active: var(--text-accent);
+  --tab-text-color: var(--text-normal);
   --tab-text-color-active: var(--text-on-accent);
   --tab-background-active-focused: var(--text-accent);
   --tab-text-color-active-focused: var(--text-on-accent);
   --tab-background-focused-active: var(--text-accent);
   --tab-text-color-focused-active: var(--text-on-accent);
-  --tab-text-color-focused: var(--text-on-accent);
-  --tab-text-color-focused-active-highlighted: var(--text-on-accent);
+  --tab-text-color-focused: var(--text-normal);
+  --tab-text-color-focused-highlighted: var(--text-normal);
   --tab-text-color-focused-active-current: var(--text-on-accent);
 }
 /*! @settings
@@ -595,22 +596,22 @@ body:not(.font-variant-off) .workspace-leaf-content .view-content {
   font-feature-settings: "ss01" 1, "ss07" 1, "cv07" 1;
 }
 .mod-root {
-  .workspace-tabs .workspace-tab-header-container {
+  .workspace-tab-header-container {
+    display: flex;
+    align-items: center;
     --tw-border-style: none;
     border-style: none;
     padding-inline: calc(var(--spacing) * 2);
     --tw-shadow: 0 0 #0000;
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    display: flex;
-    align-items: center;
     padding-top: 3px;
     padding-bottom: 8px;
     min-height: var(--header-height);
   }
-  .workspace-tabs .workspace-tab-header {
+  .workspace-tab-header {
     --tw-border-style: none;
     border-style: none;
-    background-color: transparent;
+    background-color: var(--background-secondary);
     --tw-shadow: 0 0 #0000;
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     margin-inline: calc(var(--spacing) * 1);
@@ -625,58 +626,61 @@ body:not(.font-variant-off) .workspace-leaf-content .view-content {
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
     height: 36px;
-    color: var(--text-muted);
-    background-image: none !important;
   }
-  .workspace-tabs .workspace-tab-header.is-active {
-    --tw-border-style: none;
-    border-style: none;
-    background-color: var(--tab-background-active);
-    --tw-font-weight: var(--font-weight-medium);
-    font-weight: var(--font-weight-medium);
-    color: var(--tab-text-color-active);
-    --tw-shadow: 0 0 #0000;
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  .workspace-tab-header::before, .workspace-tab-header::after, .workspace-tab-header-inner::before, .workspace-tab-header-inner::after {
+    display: none;
   }
-  .workspace-tabs .workspace-tab-header:not(.is-active) {
-    border-radius: calc(infinity * 1px);
-    --tw-border-style: none;
-    border-style: none;
-    background-color: var(--background-secondary);
-    --tw-shadow: 0 0 #0000;
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    color: var(--text-normal);
-    background-image: none !important;
-  }
-  .workspace-tabs .workspace-tab-header-inner {
+  .workspace-tab-header-inner {
+    background-image: none;
     padding-top: 10px;
     padding-right: calc(var(--spacing) * 1.5);
     padding-bottom: 8px;
     padding-left: calc(var(--spacing) * 3);
   }
-  .workspace-tabs .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+  .workspace-tab-header-inner-icon {
+    color: var(--text-on-accent);
+  }
+  .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-icon {
+    color: var(--text-normal);
+  }
+  .workspace-tab-header-inner-close-button {
+    background-image: none;
+  }
+  .workspace-tab-header-inner-close-button:hover {
+    background-image: none;
+  }
+  .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
     background-color: transparent;
+    background-image: none;
   }
-  .workspace-tabs .workspace-tab-header::before, .workspace-tabs .workspace-tab-header::after, .workspace-tabs .workspace-tab-header-inner::before, .workspace-tabs .workspace-tab-header-inner::after {
-    display: none !important;
+  .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-close-button {
+    border-radius: calc(infinity * 1px);
+    background-color: var(--background-secondary-alt);
+    color: var(--text-normal);
   }
-  .workspace-tabs .workspace-tab-header-container .titlebar-button-container.mod-right {
+  .workspace-tab-header-container .titlebar-button-container.mod-right {
     display: flex;
     height: 100%;
     align-items: center;
   }
-  .workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
-    opacity: 0%;
-    transition-property: opacity;
+  .workspace-tab-header.is-active {
+    background-color: var(--tab-background-active);
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .workspace-tab-header.is-active .workspace-tab-header-inner-close-button:hover {
+    border-radius: calc(infinity * 1px);
+    background-color: var(--background-primary);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--background-primary) 30%, transparent);
+    }
+    transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
     --tw-duration: 100ms;
     transition-duration: 100ms;
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
-  }
-  .workspace-tab-header.is-active:hover .workspace-tab-header-inner-close-button {
-    opacity: 100%;
   }
 }
 .mod-sidedock {
@@ -692,7 +696,7 @@ body:not(.font-variant-off) .workspace-leaf-content .view-content {
     padding-bottom: 7px;
     margin: 0;
   }
-  .workspace-tabs .workspace-tab-header {
+  .workspace-tab-header {
     margin-inline: calc(var(--spacing) * 1);
     display: flex;
     align-items: center;

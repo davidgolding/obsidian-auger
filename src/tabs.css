@@ -1,60 +1,82 @@
+/* Main workspace - not sidebars */
 .mod-root {
-    .workspace-tabs .workspace-tab-header-container {
-        @apply shadow-none border-none px-2;
-        @apply flex items-center;
-        /* Use padding instead of relying on child margins */
-        padding-top: 3px;
-        padding-bottom: 8px;
+    /* DOM Elements:
+    <div.workspace-tab-header-container>
+        <div.workspace-tab-header-container-inner>
+            <!-- The Individual tab -->
+            <div.workspace-tab-header:is-active:mod-active>
+                <div.workspace-tab-header-inner>
+                    <div.workspace-tab-header-inner-icon>
+                        <svg>
+                    <div.workspace-tab-header-inner-title>
+                    <div.workspace-tab-header-status-container>
+                    <div.workspace-tab-header-inner-close-button>
+    */
+    .workspace-tab-header-container {
+        @apply shadow-none border-none px-2 flex items-center;
+        @apply pt-[3px] pb-[8px];
         min-height: var(--header-height);
     }
     
-    .workspace-tabs .workspace-tab-header {
-        @apply border-none shadow-none bg-transparent;
+    .workspace-tab-header {
+        @apply border-none shadow-none bg-[var(--background-secondary)];
         @apply mx-1 rounded-full flex items-center;
         @apply transition-all duration-200 ease-in-out;
-        height: 36px;
-        color: var(--text-muted);
-        background-image: none !important;
+        @apply h-[36px];
     }
     
-    .workspace-tabs .workspace-tab-header.is-active {
-        @apply bg-[var(--tab-background-active)] text-[var(--tab-text-color-active)] font-medium border-none shadow-none;
+    .workspace-tab-header::before,
+    .workspace-tab-header::after,
+    .workspace-tab-header-inner::before,
+    .workspace-tab-header-inner::after {
+        @apply hidden;
     }
     
-    .workspace-tabs .workspace-tab-header:not(.is-active) {
-        @apply bg-[var(--background-secondary)] rounded-full border-none shadow-none;
-        color: var(--text-normal);
-        background-image: none !important;
+    .workspace-tab-header-inner {
+        @apply pl-3 pr-1.5 pt-[10px] pb-[8px] bg-none;
     }
     
-    .workspace-tabs .workspace-tab-header-inner {
-        @apply pl-3 pr-1.5 pt-[10px] pb-[8px];
+    .workspace-tab-header-inner-icon {
+        @apply text-[var(--text-on-accent)];
     }
     
-    .workspace-tabs .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
-        @apply bg-transparent;
+    .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-icon {
+        @apply text-[var(--text-normal)];
     }
     
-    .workspace-tabs .workspace-tab-header::before,
-    .workspace-tabs .workspace-tab-header::after,
-    .workspace-tabs .workspace-tab-header-inner::before,
-    .workspace-tabs .workspace-tab-header-inner::after {
-        display: none !important;
+    .workspace-tab-header-inner-close-button {
+        @apply bg-none;
     }
     
-    .workspace-tabs .workspace-tab-header-container .titlebar-button-container.mod-right {
+    .workspace-tab-header-inner-close-button:hover {
+        @apply bg-none;
+    }
+    
+    .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+        @apply bg-none bg-transparent;
+    }
+    
+    .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-close-button {
+        @apply text-[var(--text-normal)] bg-[var(--background-secondary-alt)] rounded-full;
+    }
+    
+    .workspace-tab-header-container .titlebar-button-container.mod-right {
         @apply h-full flex items-center;
     }
     
-    .workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
-        @apply opacity-0 transition-opacity duration-100 ease-in-out;
+    /* When tab is active */
+    
+    .workspace-tab-header.is-active {
+        @apply bg-[var(--tab-background-active)] font-medium;
     }
     
-    .workspace-tab-header.is-active:hover .workspace-tab-header-inner-close-button {
-        @apply opacity-100;
+    .workspace-tab-header.is-active .workspace-tab-header-inner-close-button:hover {
+        @apply bg-[var(--background-primary)]/30 rounded-full;
+        @apply transition-all duration-100 ease-in-out;
     }
 }
 
+/* Sidebars - not main workspace area */
 .mod-sidedock {
     .workspace-tabs .workspace-tab-header-container {
         @apply flex items-center border-none shadow-none;
@@ -65,7 +87,7 @@
         margin: 0;
     }
     
-    .workspace-tabs .workspace-tab-header {
+    .workspace-tab-header {
         @apply mx-1 rounded-[8px] flex items-center;
         height: 36px;
         margin: 0;
@@ -77,6 +99,7 @@
     }
 }
 
+/* Ribbon */
 .workspace-ribbon.mod-left {
     @apply mt-0 border-none bg-[var(--background-secondary)];
 }

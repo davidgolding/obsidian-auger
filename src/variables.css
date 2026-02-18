@@ -141,15 +141,17 @@ body {
 	--interactive-accent: var(--text-accent);
     --text-on-accent: #1e1e1f; /* Static fallback */
     --text-on-accent: oklch(from var(--text-accent) clamp(0.15, (0.5 - l) * 100, 0.98) 0 0);
-	--tab-container-background: var(--background-secondary);
     --table-header-background: var(--background-secondary-alt);
+	
+    --tab-container-background: var(--background-secondary);
     --tab-background-active: var(--text-accent);
+    --tab-text-color: var(--text-normal);
     --tab-text-color-active: var(--text-on-accent);
     --tab-background-active-focused: var(--text-accent);
     --tab-text-color-active-focused: var(--text-on-accent);
     --tab-background-focused-active: var(--text-accent);
     --tab-text-color-focused-active: var(--text-on-accent);
-    --tab-text-color-focused: var(--text-on-accent);
-    --tab-text-color-focused-active-highlighted: var(--text-on-accent);
+    --tab-text-color-focused: var(--text-normal);
+    --tab-text-color-focused-highlighted: var(--text-normal);
     --tab-text-color-focused-active-current: var(--text-on-accent);
 }
