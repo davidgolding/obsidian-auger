@@ -604,8 +604,8 @@ body:not(.font-variant-off) .workspace-leaf-content .view-content {
     padding-inline: calc(var(--spacing) * 2);
     --tw-shadow: 0 0 #0000;
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    padding-top: 3px;
-    padding-bottom: 8px;
+    padding-top: calc(var(--spacing) * 0);
+    padding-bottom: 4px;
     min-height: var(--header-height);
   }
   .workspace-tab-header {
@@ -626,15 +626,17 @@ body:not(.font-variant-off) .workspace-leaf-content .view-content {
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
     height: 36px;
+    padding-top: calc(var(--spacing) * 0) !important;
+    padding-bottom: calc(var(--spacing) * 0) !important;
   }
   .workspace-tab-header::before, .workspace-tab-header::after, .workspace-tab-header-inner::before, .workspace-tab-header-inner::after {
     display: none;
   }
   .workspace-tab-header-inner {
     background-image: none;
-    padding-top: 10px;
+    padding-top: calc(var(--spacing) * 0);
     padding-right: calc(var(--spacing) * 1.5);
-    padding-bottom: 8px;
+    padding-bottom: calc(var(--spacing) * 0);
     padding-left: calc(var(--spacing) * 3);
   }
   .workspace-tab-header-inner-close-button {

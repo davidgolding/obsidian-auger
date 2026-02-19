@@ -14,7 +14,7 @@
     */
     .workspace-tab-header-container {
         @apply shadow-none border-none px-2 flex items-center;
-        @apply pt-[3px] pb-[8px];
+        @apply pb-[4px] pt-0;
         min-height: var(--header-height);
     }
     
@@ -22,7 +22,7 @@
         @apply border-none shadow-none bg-[var(--background-secondary)];
         @apply mx-1 rounded-full flex items-center;
         @apply transition-colors duration-200 ease-in-out;
-        @apply h-[36px];
+        @apply h-[36px] !pt-0 !pb-0;
     }
     
     .workspace-tab-header::before,
@@ -33,7 +33,7 @@
     }
     
     .workspace-tab-header-inner {
-        @apply pl-3 pr-1.5 pt-[10px] pb-[8px] bg-none;
+        @apply pl-3 pr-1.5 pt-0 pb-0 bg-none;
     }
     
     .workspace-tab-header-inner-close-button {
