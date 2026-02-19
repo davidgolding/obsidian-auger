@@ -14,8 +14,12 @@
     */
     .workspace-tab-header-container {
         @apply shadow-none border-none px-2 flex items-center;
-        @apply pb-[4px] pt-0;
+        @apply pb-0 pt-0;
         min-height: var(--header-height);
+    }
+    
+    .workspace-tab-header-container-inner {
+        @apply mt-0 pt-0;
     }
     
     .workspace-tab-header {
@@ -34,6 +38,10 @@
     
     .workspace-tab-header-inner {
         @apply pl-3 pr-1.5 pt-0 pb-0 bg-none;
+    }
+    
+    .workspace-tab-header-inner-title {
+        @apply mt-[1px];
     }
     
     .workspace-tab-header-inner-close-button {

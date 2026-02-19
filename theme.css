@@ -605,8 +605,12 @@ body:not(.font-variant-off) .workspace-leaf-content .view-content {
     --tw-shadow: 0 0 #0000;
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     padding-top: calc(var(--spacing) * 0);
-    padding-bottom: 4px;
+    padding-bottom: calc(var(--spacing) * 0);
     min-height: var(--header-height);
+  }
+  .workspace-tab-header-container-inner {
+    margin-top: calc(var(--spacing) * 0);
+    padding-top: calc(var(--spacing) * 0);
   }
   .workspace-tab-header {
     --tw-border-style: none;
@@ -638,6 +642,9 @@ body:not(.font-variant-off) .workspace-leaf-content .view-content {
     padding-right: calc(var(--spacing) * 1.5);
     padding-bottom: calc(var(--spacing) * 0);
     padding-left: calc(var(--spacing) * 3);
+  }
+  .workspace-tab-header-inner-title {
+    margin-top: 1px;
   }
   .workspace-tab-header-inner-close-button {
     background-image: none;
