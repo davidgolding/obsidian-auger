@@ -6,6 +6,12 @@
   @apply bg-[var(--text-highlight-bg)];
 }
 
+/* ==highlight== syntax */
+.markdown-rendered mark,
+.cm-s-obsidian .cm-highlight {
+  @apply bg-[var(--text-highlight-bg)] rounded-sm px-0.5;
+}
+
 .cm-s-obsidian .cm-editor .cm-inline-code {
   @apply text-[var(--text-accent)] bg-[var(--background-primary-alt)] rounded px-1 py-0.5;
 }

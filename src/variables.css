@@ -70,7 +70,7 @@ body {
 	--background-secondary-alt: #efefed;
 	--text-normal: var(--auger-light-text-normal);
 	--text-muted: #8a8785;
-	--text-highlight-bg: hsl(var(--accent-h) var(--accent-s) var(--accent-l) 0.15);
+	--text-highlight-bg: hsl(var(--accent-h) var(--accent-s) var(--accent-l) / 0.15);
 	--bold-color: #FF3B30;
 	--italic-color: #FF9500;
 	--background-modifier-border: #e5e4e3;
@@ -131,7 +131,7 @@ body {
 	--background-secondary-alt: var(--color-base-35);
 	--text-normal: var(--color-paper);
 	--text-muted: var(--color-base-100);
-	--text-highlight-bg: hsl(var(--accent-h) var(--accent-s) var(--accent-l) 0.2);
+	--text-highlight-bg: hsl(var(--accent-h) var(--accent-s) var(--accent-l) / 0.2);
 	--bold-color: var(--color-red);
 	--italic-color: var(--color-yellow);
 	--background-modifier-border: #3a3a3c;
