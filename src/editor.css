@@ -3,10 +3,9 @@
 }
 
 .cm-s-obsidian .cm-selection, ::selection {
-  @apply bg-[var(--text-highlight-bg)];
+  background-color: var(--text-selection);
 }
 
-/* ==highlight== syntax */
 .markdown-rendered mark,
 .cm-s-obsidian .cm-highlight {
   @apply bg-[var(--text-highlight-bg)] rounded-sm px-0.5;

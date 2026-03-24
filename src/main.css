@@ -170,6 +170,16 @@ a:hover {
   @apply text-[var(--text-accent-hover)] underline;
 }
 
+input::selection,
+textarea::selection {
+    background-color: var(--text-selection);
+}
+
+input,
+textarea {
+    caret-color: var(--text-accent);
+}
+
 /* Fix for opaque modal close button */
 .modal-close-button {
     @apply z-[var(--layer-modal)] text-[var(--text-muted)] opacity-100;
