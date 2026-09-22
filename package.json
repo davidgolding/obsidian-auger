@@ -1,6 +1,6 @@
 {
   "name": "Auger",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "A minimalist theme for Obsidian that prioritizes long-form writing and readability",
   "main": "index.js",
   "scripts": {
