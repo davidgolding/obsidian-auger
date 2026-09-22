@@ -1,4 +1,4 @@
-/*! tailwindcss v4.2.2 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -549,7 +549,7 @@ input, textarea {
 .cm-s-obsidian .cm-editor .cm-inline-code {
   border-radius: 0.25rem;
   background-color: var(--background-primary-alt);
-  padding-inline: calc(var(--spacing) * 1);
+  padding-inline: var(--spacing);
   padding-block: calc(var(--spacing) * 0.5);
   color: var(--text-accent);
 }
@@ -579,11 +579,11 @@ input, textarea {
   padding-left: calc(var(--spacing) * 5);
 }
 .markdown-preview-view ul li {
-  margin-block: calc(var(--spacing) * 1);
+  margin-block: var(--spacing);
   list-style-type: disc;
 }
 .markdown-preview-view ol li {
-  margin-block: calc(var(--spacing) * 1);
+  margin-block: var(--spacing);
   list-style-type: decimal;
 }
 .markdown-preview-view pre {
@@ -608,80 +608,78 @@ body.show-inline-title .view-header-title {
 body:not(.font-variant-off) .workspace-leaf-content .view-content {
   font-feature-settings: "ss01" 1, "ss07" 1, "cv07" 1;
 }
-.mod-root {
-  .workspace-tab-header-container {
-    display: flex;
-    align-items: center;
-    --tw-border-style: none;
-    border-style: none;
-    padding-inline: calc(var(--spacing) * 2);
-    --tw-shadow: 0 0 #0000;
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    padding-top: calc(var(--spacing) * 0);
-    padding-bottom: calc(var(--spacing) * 0);
-    min-height: var(--header-height);
-  }
-  .workspace-tab-header-container-inner {
-    margin-top: calc(var(--spacing) * 0);
-    padding-top: calc(var(--spacing) * 0);
-  }
-  .workspace-tab-header {
-    --tw-border-style: none;
-    border-style: none;
-    background-color: var(--background-secondary);
-    --tw-shadow: 0 0 #0000;
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    margin-inline: calc(var(--spacing) * 1);
-    display: flex;
-    align-items: center;
-    border-radius: calc(infinity * 1px);
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-    --tw-duration: 200ms;
-    transition-duration: 200ms;
-    --tw-ease: var(--ease-in-out);
-    transition-timing-function: var(--ease-in-out);
-    height: 36px;
-    padding-top: calc(var(--spacing) * 0) !important;
-    padding-bottom: calc(var(--spacing) * 0) !important;
-  }
-  .workspace-tab-header::before, .workspace-tab-header::after, .workspace-tab-header-inner::before, .workspace-tab-header-inner::after {
-    display: none;
-  }
-  .workspace-tab-header-inner {
-    background-image: none;
-    padding-top: calc(var(--spacing) * 0);
-    padding-right: calc(var(--spacing) * 1.5);
-    padding-bottom: calc(var(--spacing) * 0);
-    padding-left: calc(var(--spacing) * 3);
-  }
-  .workspace-tab-header-inner-title {
-    margin-top: 1px;
-  }
-  .workspace-tab-header-inner-close-button {
-    background-image: none;
-  }
-  .workspace-tab-header-inner-close-button:hover {
-    background-image: none;
-  }
-  .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
-    background-color: transparent;
-    background-image: none;
-  }
-  .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
-    color: var(--text-on-accent) !important;
-  }
-  .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-close-button {
-    border-radius: calc(infinity * 1px);
-    background-color: var(--background-secondary-alt);
-    color: var(--text-normal);
-  }
-  .workspace-tab-header-container .titlebar-button-container.mod-right {
-    display: flex;
-    height: 100%;
-    align-items: center;
-  }
+.mod-root .workspace-tab-header-container {
+  display: flex;
+  align-items: center;
+  --tw-border-style: none;
+  border-style: none;
+  padding-inline: calc(var(--spacing) * 2);
+  --tw-shadow: 0 0 #0000;
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  padding-top: 0px;
+  padding-bottom: 0px;
+  min-height: var(--header-height);
+}
+.mod-root .workspace-tab-header-container-inner {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.mod-root .workspace-tab-header {
+  --tw-border-style: none;
+  border-style: none;
+  background-color: var(--background-secondary);
+  --tw-shadow: 0 0 #0000;
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  margin-inline: var(--spacing);
+  display: flex;
+  align-items: center;
+  border-radius: calc(infinity * 1px);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 200ms;
+  transition-duration: 200ms;
+  --tw-ease: var(--ease-in-out);
+  transition-timing-function: var(--ease-in-out);
+  height: 36px;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+.mod-root .workspace-tab-header::before, .mod-root  .workspace-tab-header::after, .mod-root  .workspace-tab-header-inner::before, .mod-root  .workspace-tab-header-inner::after {
+  display: none;
+}
+.mod-root .workspace-tab-header-inner {
+  background-image: none;
+  padding-top: 0px;
+  padding-right: calc(var(--spacing) * 1.5);
+  padding-bottom: 0px;
+  padding-left: calc(var(--spacing) * 3);
+}
+.mod-root .workspace-tab-header-inner-title {
+  margin-top: 1px;
+}
+.mod-root .workspace-tab-header-inner-close-button {
+  background-image: none;
+}
+.mod-root .workspace-tab-header-inner-close-button:hover {
+  background-image: none;
+}
+.mod-root .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+  background-color: transparent;
+  background-image: none;
+}
+.mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+  color: var(--text-on-accent) !important;
+}
+.mod-root .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-close-button {
+  border-radius: calc(infinity * 1px);
+  background-color: var(--background-secondary-alt);
+  color: var(--text-normal);
+}
+.mod-root .workspace-tab-header-container .titlebar-button-container.mod-right {
+  display: flex;
+  height: 100%;
+  align-items: center;
 }
 .workspace-tab-header {
   transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
@@ -717,39 +715,40 @@ body:not(.font-variant-off) .workspace-leaf-content .view-content {
   --tw-ease: var(--ease-in-out);
   transition-timing-function: var(--ease-in-out);
 }
-.mod-sidedock {
-  .workspace-tabs .workspace-tab-header-container {
-    display: flex;
-    align-items: center;
-    --tw-border-style: none;
-    border-style: none;
-    --tw-shadow: 0 0 #0000;
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    min-height: var(--header-height);
-    padding-top: 7px;
-    padding-bottom: 7px;
-    margin: 0;
-  }
-  .workspace-tab-header {
-    margin-inline: calc(var(--spacing) * 1);
-    display: flex;
-    align-items: center;
-    border-radius: 8px;
-    height: 36px;
-    margin: 0;
-  }
-  .workspace-tab-header-inner {
-    display: flex;
-    align-items: center;
-    padding-inline: calc(var(--spacing) * 1.5);
-    height: 100%;
-  }
+.mod-sidedock .workspace-tabs .workspace-tab-header-container {
+  display: flex;
+  align-items: center;
+  --tw-border-style: none;
+  border-style: none;
+  --tw-shadow: 0 0 #0000;
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  min-height: var(--header-height);
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin: 0;
+}
+.mod-sidedock .workspace-tab-header {
+  margin-inline: var(--spacing);
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  height: 36px;
+  margin: 0;
+}
+.mod-sidedock .workspace-tab-header-inner {
+  display: flex;
+  align-items: center;
+  padding-inline: calc(var(--spacing) * 1.5);
+  height: 100%;
 }
 .workspace-ribbon.mod-left {
-  margin-top: calc(var(--spacing) * 0);
+  margin-top: 0px;
   --tw-border-style: none;
   border-style: none;
   background-color: var(--background-secondary);
+  border-right: none;
+  border-top: none;
+  box-shadow: none;
 }
 .workspace-ribbon .side-dock-actions {
   margin-top: calc(var(--header-height) + 14px);
@@ -876,7 +875,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
   align-items: center;
 }
 .nav-folder-title-content .nav-folder-icon {
-  margin-right: calc(var(--spacing) * 1);
+  margin-right: var(--spacing);
 }
 .nav-buttons-container {
   display: flex;
@@ -891,7 +890,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: calc(var(--spacing) * 1);
+  gap: var(--spacing);
   overflow: hidden;
   white-space: nowrap;
   --tw-outline-style: none;
@@ -932,7 +931,7 @@ button.mod-cta {
 }
 button.mod-cta::before {
   position: absolute;
-  top: calc(var(--spacing) * 0);
+  top: 0px;
   left: -100%;
   height: 100%;
   width: 100%;
@@ -965,32 +964,28 @@ button.mod-cta:active {
 select.dropdown {
   border-radius: 100vh;
 }
-body:is(.theme-light) {
-  .kanban-plugin__item {
-    margin-top: calc(var(--spacing) * 1);
-    border-color: var(--color-neutral-200);
-  }
-  .kanban-plugin__item-content-wrapper {
-    background-image: none;
-    padding: calc(var(--spacing) * 1);
-  }
-  .kanban-plugin__item-title-wrapper {
-    background-image: none;
-  }
+body:is(.theme-light) .kanban-plugin__item {
+  margin-top: var(--spacing);
+  border-color: var(--color-neutral-200);
 }
-body:is(.theme-dark) {
-  .kanban-plugin__item {
-    margin-top: calc(var(--spacing) * 1);
-    --tw-border-style: none;
-    border-style: none;
-  }
-  .kanban-plugin__item-content-wrapper {
-    background-color: var(--color-neutral-700);
-    padding: calc(var(--spacing) * 1);
-  }
-  .kanban-plugin__item-title-wrapper {
-    background-color: var(--color-neutral-700);
-  }
+body:is(.theme-light) .kanban-plugin__item-content-wrapper {
+  background-image: none;
+  padding: var(--spacing);
+}
+body:is(.theme-light) .kanban-plugin__item-title-wrapper {
+  background-image: none;
+}
+body:is(.theme-dark) .kanban-plugin__item {
+  margin-top: var(--spacing);
+  --tw-border-style: none;
+  border-style: none;
+}
+body:is(.theme-dark) .kanban-plugin__item-content-wrapper {
+  background-color: var(--color-neutral-700);
+  padding: var(--spacing);
+}
+body:is(.theme-dark) .kanban-plugin__item-title-wrapper {
+  background-color: var(--color-neutral-700);
 }
 .kanban-plugin__item-title :is(p) {
   font-size: var(--text-xs);

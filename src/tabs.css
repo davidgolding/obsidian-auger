@@ -117,6 +117,9 @@
 /* Ribbon */
 .workspace-ribbon.mod-left {
     @apply mt-0 border-none bg-[var(--background-secondary)];
+    border-right: none;
+    border-top: none;
+    box-shadow: none;
 }
 
 .workspace-ribbon .side-dock-actions {
